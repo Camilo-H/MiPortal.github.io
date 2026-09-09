@@ -1,25 +1,69 @@
-.titulo{
-    padding: 1%;
-  }
 .container {
     margin-top: 10px;
     display: flex;
-    height: 70vh; /* Establece la altura del contenedor al 100% del viewport */
+    align-items: center;
+    min-height: 70vh;
+    gap: 24px;
 }
+
 .divImage {
-    justify-content: center;
-    flex-grow: 0; /* Evita que el primer div crezca */
-    flex-shrink: 0; /* Evita que el primer div se encoja */
     width: 40%;
-    margin-right: 20px; /* Margen a la derecha del primer div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
+
+.divImage img {
+    width: min(100%, 300px);
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 .divdescripcion {
-    flex-grow: 1;
-    margin-left: 10px; /* Margen a la izquierda del segundo div */
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.contend{
-    margin-top: 4%;
+
+.titulo {
+    width: 100%;
+    padding: 1% 0 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-p{
+
+.titulo h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.contend {
+    margin-top: 0;
+}
+
+p {
     text-align: justify;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .divImage,
+    .divdescripcion {
+        width: 100%;
+    }
+
+    .divImage {
+        margin-bottom: 1rem;
+    }
 }
