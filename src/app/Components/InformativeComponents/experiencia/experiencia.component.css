@@ -1,3 +1,120 @@
-.titulo{
-    padding: 2%;
+.experiencia {
+    padding: 2rem 1rem 3rem;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 1.5rem;
+}
+
+.titulo h1 {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.experiencia-grid {
+    width: min(1280px, 94%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.experience-card {
+    display: flex;
+}
+
+.card {
+    width: 100%;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+}
+
+.card-body {
+    padding: 1.5rem;
+    max-height: 420px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.75) rgba(241, 245, 249, 0.7);
+}
+
+.card-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.card-body::-webkit-scrollbar-track {
+    background: rgba(241, 245, 249, 0.7);
+    border-radius: 999px;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.75);
+    border-radius: 999px;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: #111827;
+}
+
+.card-subtitle {
+    margin-bottom: 0.75rem;
+    color: #475569;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.timeDuration,
+.functions {
+    margin-bottom: 0.5rem;
+    color: #334155;
+    font-weight: 600;
+}
+
+.card-body p {
+    margin-bottom: 0.6rem;
+    color: #475569;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .experiencia-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .experiencia {
+        padding-top: 1.5rem;
+    }
+
+    .experiencia-grid {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .card-body {
+        padding: 1.1rem;
+        max-height: none;
+        overflow: visible;
+    }
 }
