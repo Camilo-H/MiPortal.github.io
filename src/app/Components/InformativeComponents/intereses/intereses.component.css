@@ -1,0 +1,85 @@
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1rem 1.5rem;
+}
+
+.titulo h1 {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: #1f2937;
+    letter-spacing: -0.04em;
+}
+
+.container {
+    width: min(1200px, 94%);
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.divHpersonales {
+    display: flex;
+    justify-content: center;
+}
+
+.hPersonales {
+    width: 100%;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 1.25rem;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    padding: clamp(1.1rem, 2vw, 2rem);
+}
+
+.hPersonales p {
+    margin: 0;
+    text-align: justify;
+    line-height: 1.8;
+    color: #475569;
+    font-size: 1rem;
+}
+
+.hPersonales p + p {
+    margin-top: 1rem;
+}
+
+.hPersonales strong {
+    color: #111827;
+    font-weight: 700;
+    background: linear-gradient(120deg, rgba(59, 130, 246, 0.12), rgba(14, 165, 233, 0.06));
+    border-radius: 0.4rem;
+    padding: 0.1rem 0.35rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: min(900px, 92%);
+    }
+
+    .hPersonales {
+        padding: 1rem;
+    }
+
+    .hPersonales p {
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        padding-bottom: 1rem;
+    }
+
+    .titulo h1 {
+        font-size: 1.85rem;
+    }
+
+    .hPersonales p {
+        text-align: left;
+        font-size: 0.96rem;
+    }
+}
