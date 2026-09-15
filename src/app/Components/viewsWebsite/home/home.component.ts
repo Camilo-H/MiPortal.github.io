@@ -6,13 +6,12 @@ import { FormacionComponent } from '../../InformativeComponents/formacion/formac
 import { HabilidadesComponent } from '../../InformativeComponents/habilidades/habilidades.component';
 import { TecnologiasComponent } from '../../InformativeComponents/tecnologias/tecnologias.component';
 import { InteresesComponent } from '../../InformativeComponents/intereses/intereses.component';
-import { ReferenciasComponent } from '../../InformativeComponents/referencias/referencias.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, PerfilComponent, ExperienciaComponent, FormacionComponent,
-    HabilidadesComponent, TecnologiasComponent, InteresesComponent, ReferenciasComponent],
+    HabilidadesComponent, TecnologiasComponent, InteresesComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

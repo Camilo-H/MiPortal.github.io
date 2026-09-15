@@ -1,19 +1,84 @@
-.container {
-    margin-top: 10px;
+.titulo {
     display: flex;
-    height: 70vh; /* Establece la altura del contenedor al 100% del viewport */
-}
-.divInfoAcademic{
     justify-content: center;
-    flex-grow: 1; /* Evita que el primer div crezca */
-    flex-shrink: 0; /* Evita que el primer div se encoja */
-    width: 40%;
-    margin-right: 20px; /* Margen a la derecha del primer div */
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1rem 1.5rem;
 }
-.divOtrosCursos{
-    justify-content: center;
-    flex-grow: 1;
-    margin-left: 10px; /* Margen a la izquierda del segundo div */
-    flex-shrink: 0; /* Evita que el primer div se encoja */
-    width: 40%;
+
+.titulo h1 {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.formacion-container {
+    width: min(1200px, 94%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+    padding-bottom: 2rem;
+}
+
+.panel {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    padding: 1.5rem;
+}
+
+.panel h4 {
+    margin: 0 0 1rem;
+    text-align: center;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.info-item {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item h6 {
+    margin: 0 0 0.35rem;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.info-item p {
+    margin: 0;
+    text-align: justify;
+    color: #475569;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .formacion-container {
+        grid-template-columns: 1fr;
+        width: min(820px, 92%);
+    }
+}
+
+@media (max-width: 576px) {
+    .panel {
+        padding: 1.1rem;
+    }
+
+    .panel h4 {
+        font-size: 1.2rem;
+    }
+
+    .info-item h6 {
+        font-size: 0.98rem;
+    }
 }

@@ -8,7 +8,6 @@ import { FormacionComponent } from './Components/InformativeComponents/formacion
 import { HabilidadesComponent } from './Components/InformativeComponents/habilidades/habilidades.component';
 import { TecnologiasComponent } from './Components/InformativeComponents/tecnologias/tecnologias.component';
 import { InteresesComponent } from './Components/InformativeComponents/intereses/intereses.component';
-import { ReferenciasComponent } from './Components/InformativeComponents/referencias/referencias.component';
 
 
 const routes: Routes = [
@@ -19,8 +18,7 @@ const routes: Routes = [
   {path: 'formacion', component: FormacionComponent},
   {path: 'habilidades', component: HabilidadesComponent},
   {path: 'tecnologias', component: TecnologiasComponent},
-  {path: 'intereses', component: InteresesComponent},
-  {path: 'referencias', component: ReferenciasComponent}, 
+  {path: 'intereses', component: InteresesComponent}
 
 ];
 

@@ -21,7 +21,7 @@
     width: min(1280px, 94%);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1.5rem;
     align-items: stretch;
 }
@@ -51,6 +51,10 @@
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: rgba(148, 163, 184, 0.75) rgba(241, 245, 249, 0.7);
+}
+
+.texto {
+    font-size: 15px;
 }
 
 .card-body::-webkit-scrollbar {
