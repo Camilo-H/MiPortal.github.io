@@ -7,17 +7,17 @@ import { ExperienciaComponent } from './Components/InformativeComponents/experie
 import { FormacionComponent } from './Components/InformativeComponents/formacion/formacion.component';
 import { HabilidadesComponent } from './Components/InformativeComponents/habilidades/habilidades.component';
 import { InteresesComponent } from './Components/InformativeComponents/intereses/intereses.component';
+import { ContactoComponent } from './Components/InformativeComponents/contacto/contacto.component';
 
 
 const routes: Routes = [
-  
   {path: '', component: HomeComponent},
   {path: 'perfil', component: PerfilComponent},
   {path: 'experiencia', component : ExperienciaComponent},
   {path: 'formacion', component: FormacionComponent},
   {path: 'habilidades', component: HabilidadesComponent},
-  {path: 'intereses', component: InteresesComponent}
-
+  {path: 'intereses', component: InteresesComponent},
+  {path: 'contacto', component: ContactoComponent},
 ];
 
 

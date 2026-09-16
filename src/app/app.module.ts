@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/viewsWebsite/header/header.component';
-import { FooterComponent } from './Components/viewsWebsite/footer/footer.component';
 import { HomeComponent } from './Components/viewsWebsite/home/home.component';
 import { PerfilComponent } from './Components/InformativeComponents/perfil/perfil.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +15,6 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     HeaderComponent,
-    FooterComponent,
     HomeComponent,
     PerfilComponent,
     AppRoutingModule

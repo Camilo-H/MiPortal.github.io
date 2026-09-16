@@ -5,12 +5,13 @@ import { ExperienciaComponent } from '../../InformativeComponents/experiencia/ex
 import { FormacionComponent } from '../../InformativeComponents/formacion/formacion.component';
 import { HabilidadesComponent } from '../../InformativeComponents/habilidades/habilidades.component';
 import { InteresesComponent } from '../../InformativeComponents/intereses/intereses.component';
+import { ContactoComponent } from '../../InformativeComponents/contacto/contacto.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, PerfilComponent, ExperienciaComponent, FormacionComponent,
-    HabilidadesComponent, InteresesComponent],
+    HabilidadesComponent, InteresesComponent, ContactoComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

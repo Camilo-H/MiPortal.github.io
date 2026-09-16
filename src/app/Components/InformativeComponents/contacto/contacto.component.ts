@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-contacto',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  templateUrl: './contacto.component.html',
+  styleUrls: ['./contacto.component.css']
 })
-export class FooterComponent {
+export class ContactoComponent {
 
 }

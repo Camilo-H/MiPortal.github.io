@@ -1,87 +1,184 @@
+.habilidades {
+    padding: 1rem 0 3rem;
+}
+
 .titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: min(1280px, 94%);
+    margin: 0 auto;
+    padding: 1rem 1rem 2rem;
     text-align: center;
-    padding: 1rem 1rem 1.5rem;
+}
+
+.eyebrow {
+    margin: 0 0 0.45rem;
+    color: #64748b;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .titulo h1 {
     margin: 0;
+    color: #172554;
     font-size: clamp(2rem, 3vw, 2.8rem);
     font-weight: 700;
-    color: #1f2937;
 }
 
-.container {
-    width: min(1200px, 94%);
+.seccion-habilidades {
+    width: min(1280px, 94%);
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
-    align-items: stretch;
-    padding-bottom: 2rem;
 }
 
-.divHpersonales,
-.divHTecnicas {
-    display: flex;
-}
-
-.hPersonales,
-.hTecnicas,
-.contend {
-    width: 100%;
-    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-    border: 1px solid rgba(148, 163, 184, 0.28);
-    border-radius: 1rem;
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-    padding: 1.5rem;
-}
-
-.hPersonales h4,
-.hTecnicas h4 {
-    margin: 0 0 1rem;
+.seccion-heading {
+    margin: 0 auto 1.25rem;
     text-align: center;
-    font-size: 1.45rem;
-    font-weight: 700;
-    color: #111827;
 }
 
-.hPersonales p,
-.hTecnicas p {
-    text-align: justify;
+.seccion-heading h2 {
+    margin: 0 0 0.45rem;
+    color: #1e3a8a;
+    font-size: clamp(1.45rem, 2vw, 1.9rem);
+}
+
+.seccion-heading p {
+    margin: 0;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.tarjetas-tecnicas,
+.tarjetas-personales {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.tarjetas-tecnicas {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.tarjetas-personales {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.tarjeta-habilidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 0.8rem;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.tarjeta-habilidad:hover {
+    transform: translateY(-4px);
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+}
+
+.tarjeta-tecnica {
+    min-height: 245px;
+    padding: 1.35rem 1.25rem;
+}
+
+.tarjeta-icono {
+    display: inline-grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-bottom: 1rem;
+    color: #2563eb;
+    background: #dbeafe;
+    border-radius: 0.7rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.tarjeta-habilidad h3 {
+    margin: 0 0 0.9rem;
+    color: #1e3a8a;
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.tarjeta-tecnica ul {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.tarjeta-tecnica li {
+    color: #475569;
+    font-size: 0.92rem;
+    line-height: 1.4;
+}
+
+.tarjeta-tecnica li::before {
+    content: '';
+    display: inline-block;
+    width: 0.35rem;
+    height: 0.35rem;
+    margin: 0 0.45rem 0.1rem 0;
+    border-radius: 50%;
+    background: #3b82f6;
+}
+
+.seccion-personales {
+    margin-top: 3rem;
+}
+
+.tarjeta-personal {
+    min-height: 150px;
+    padding: 1.25rem;
+}
+
+.tarjeta-personal p {
     margin: 0;
     color: #475569;
-    line-height: 1.7;
-    font-size: 1rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    text-align: center;
 }
 
-.hTecnicas {
-    height: 100%;
+@media (max-width: 1050px) {
+    .tarjetas-tecnicas,
+    .tarjetas-personales {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
-.progress {
-    margin: auto;
-    margin-top: 3%;
+@media (max-width: 780px) {
+    .tarjetas-tecnicas,
+    .tarjetas-personales {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
-@media (max-width: 900px) {
-    .container {
+@media (max-width: 520px) {
+    .habilidades {
+        padding-top: 0.5rem;
+    }
+
+    .titulo,
+    .seccion-habilidades {
+        width: 92%;
+    }
+
+    .tarjetas-tecnicas,
+    .tarjetas-personales {
         grid-template-columns: 1fr;
-        width: min(820px, 92%);
-    }
-}
-
-@media (max-width: 576px) {
-    .hPersonales,
-    .hTecnicas,
-    .contend {
-        padding: 1.1rem;
     }
 
-    .hPersonales h4,
-    .hTecnicas h4 {
-        font-size: 1.2rem;
+    .tarjeta-tecnica,
+    .tarjeta-personal {
+        min-height: auto;
     }
 }
