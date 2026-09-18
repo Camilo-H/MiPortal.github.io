@@ -11,11 +11,11 @@
             <span class="contacto-action">Escríbeme</span>
         </a>
 
-        <a class="contacto-card email" href="mailto:camilohernananacona@gmail.com" aria-label="Enviar un correo a camilohernananacona@gmail.com">
+        <button class="contacto-card email" type="button" (click)="openEmailModal()" aria-label="Abrir formulario para enviar un email">
             <span class="contacto-icon" aria-hidden="true">&#9993;</span>
             <span class="contacto-name">Email</span>
             <span class="contacto-action">Escríbeme</span>
-        </a>
+        </button>
 
         <a class="contacto-card instagram" href="https://www.instagram.com/camilo_heranas?stkn=b2h3cDZta3gzZ3Jz" target="_blank" rel="noopener noreferrer" aria-label="Visitar el perfil de Instagram de Camilo Hernán">
             <span class="contacto-icon" aria-hidden="true">&#9678;</span>
@@ -31,4 +31,44 @@
     </div>
 
     <p class="cierre">Hazlo, no dudes en contactarme, no te arrepentirás.</p>
+
+    <div class="modal-backdrop" *ngIf="isEmailModalOpen" (click)="closeEmailModal()">
+        <section class="email-modal" role="dialog" aria-modal="true" aria-labelledby="email-modal-title" (click)="$event.stopPropagation()">
+            <button class="modal-close" type="button" (click)="closeEmailModal()" aria-label="Cerrar formulario">&times;</button>
+            <p class="eyebrow">Contacto directo</p>
+            <h2 id="email-modal-title">Envíame un mensaje</h2>
+            <p class="modal-intro">Completa el formulario y recibiré tu mensaje en mi correo.</p>
+
+            <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)" novalidate>
+                <div class="field">
+                    <label for="subject">Asunto</label>
+                    <input id="subject" name="subject" type="text" ngModel required placeholder="¿Sobre qué quieres hablar?">
+                </div>
+
+                <div class="field">
+                    <label for="name">Tu nombre o el de tu compañía</label>
+                    <input id="name" name="name" type="text" ngModel required placeholder="Tu nombre o compañía">
+                </div>
+
+                <div class="field">
+                    <label for="email">Correo electrónico para ponernos en contacto</label>
+                    <input id="email" name="email" type="email" ngModel required email placeholder="tu@email.com. Tuyo o de tu compañía">
+                </div>
+
+                <div class="field">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" ngModel required placeholder="Escribe tu mensaje"></textarea>
+                </div>
+
+                <button class="send-button" type="submit" [disabled]="contactForm.invalid || isSending">
+                    {{ isSending ? 'Enviando...' : 'Enviar mensaje' }}
+                </button>
+
+                <p class="form-feedback success" *ngIf="feedbackType === 'success'">Tu mensaje fue enviado correctamente.</p>
+                <p class="form-feedback error" *ngIf="feedbackType === 'error'">No fue posible enviar el mensaje. Inténtalo nuevamente.</p>
+            </form>
+        </section>
+    </div>
 </section>
+
+
